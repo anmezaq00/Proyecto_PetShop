@@ -66,6 +66,7 @@ def editar_producto(request, sku):
         form = ProductoForm(instance=producto)
     return render(request, 'editar_producto.html', {'form': form})
 
+#Eliminacion de un producto
 def eliminar_producto(request, sku):
     producto = get_object_or_404(Producto, sku=sku)
     if request.method == 'POST':
