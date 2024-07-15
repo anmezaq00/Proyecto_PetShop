@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Producto, Categoria, Usuario
 
+# Aqui se modificaron funciones del main de Django para facilitar eliminacion, creacion, modifcacion y filtro para los 
+# productos
+
 class ProductoAdmin(admin.ModelAdmin):
     list_display = ('sku', 'nombre', 'descripcion', 'precio', 'stock', 'categoria', 'img')
     search_fields = ('nombre', 'sku')  
