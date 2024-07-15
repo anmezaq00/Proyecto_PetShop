@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto: Alimento para Gatos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="/media/img/braberi tarjeta 3.jpg" class="img-fluid" alt="Alimento para Gatos">
+        </div>
+        <div class="col-md-6">
+            <br><br><br><br>
+            <h1 class="mb-4">Bravery Chicken Adult Cat alimento para gato</h1>
+            <p class="lead">Alimento completo para gatos adultos con pollo</p>
+            <hr>
+            <p>Precio: $21.990 - $51.990</p>
+            <ul>
+            <br><br>
+                <li><strong>Peso alimento:</strong> 4 <strong>(kg)</strong> ----- $21.990</li>
+                <br>
+                <li><strong>Peso alimento:</strong> 12 <strong>(kg)</strong> ----- $51.990</li>
+            </ul>
+            <br>
+            <div class="mb-3">
+                <label for="productSelection" class="form-label"><strong>Elige un producto:</strong></label>
+                <select class="form-select" id="productSelection">
+                    <option value="4|21990">Peso alimento: 4 kg</option>
+                    <option value="12|51990">Peso alimento: 12 kg</option>
+                </select>
+            </div>
+            <br>
+            <button class="btn btn-primary" id="addToCartBtn">Añadir al Carrito</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <h2>Descripción Detallada</h2>
+            <br>
+            <p><strong>Chicken Adult Cat de BRAVERY® Es un alimento con pollo para gatos adultos.</strong> Libre de grano y cereales, además, de ser monoproteíco, con pollo siempre como primer ingrediente y enriquecido con antioxidantes hipoalergénicos 100% naturales. Es una receta de pollo de elevado contenido de proteínas, alta digestibilidad y palatabilidad, ideal para gatos adultos.</p>
+            <br>
+            <p>BRAVERY® Pet Food nació a partir de una consulta generalizada, a distribuidores y consumidores finales, en la que se preguntaba cuál sería su propuesta para el mejor alimento para una mascota. Acumulando todas las respuestas nace BRAVERY® un producto referente a nivel de calidad en el segmento super Premium.</p>
+            <br>
+            <p><strong>Las ventajas de este producto son:</strong></p>
+            <ul>
+                <li><strong>Con Pollo:</strong> Carne de elevado contenido en proteínas de alto valor biológico, de alta digestibilidad y palatabilidad, además, es una carne baja en calorías y rica en ácidos grasos insaturados y vitaminas (niacina y ácido fólico)</li>
+                <br>
+                <li><strong>Con Tapioca:</strong> La tapioca es un alimento sumamente energético, fuente de hidratos de carbono altamente digestibles e idónea para dietas hipoalergénicas.</li>
+                <br>
+                <li><strong>Libre de Gluten:</strong> Elaborado sin cereales, ideal para gatos alérgicos o con problemas digestivos.</li>
+                <br>
+                <li><strong>Salud Cardiovascular:</strong> La taurina es beneficiosa para la prevención de algunas cardiomiopatías, mientras que los ácidos grasos Omega-3 (EPA y DHA) ayudan a fortalecer la función cardíaca.</li>
+                <br>
+                <li><strong>Cuidado del Cuerpo:</strong> La condroitina y la glucosamina son componentes esenciales del cartílago con efectos complementarios para mantener una buena salud articular.</li>
+                <br>
+                <li><strong>Apoyo del Tracto Digestivo:</strong> La acción conjunta de FOS como prebiótico, MOS que afecta el control de microorganismos patógenos y fibras naturales (solubles e insolubles) con otro efecto que promueve la flora intestinal saludable y la digestión adecuada.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('addToCartBtn').addEventListener('click', function() {
+        const productSelect = document.getElementById('productSelection');
+        const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
+        const price = productSelect.value.split('|')[1];
+        const item = {
+            name: 'Bravery Chicken Adult Cat alimento para gato',
+            weight: selectedProduct.split(':')[1].trim(),
+            price: price
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert('Producto añadido al carrito');
+    });
+</script>
+</body>
+</html>

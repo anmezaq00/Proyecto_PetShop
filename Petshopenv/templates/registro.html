@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z24L3+6pfFJ5cuXHOda8+Nhtn7bKQVDEOusfZD" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('img/fondo-colores-degradado-futurista_78895-2845.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-container {
+            position: relative;
+            max-width: 500px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+            background-color: rgba(255, 255, 255, 0.9); 
+        }
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #007bff;
+        }
+        .form-control {
+            border: none;
+            border-bottom: 2px solid #007bff;
+            border-radius: 0;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            box-shadow: none;
+            background-color: transparent;
+            font-size: 1.1rem;
+        }
+        .form-control:focus {
+            border-color: #0056b3;
+            box-shadow: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container register-container">
+        <div class="register-form">
+            <h2>Regístrate</h2>
+            <form id="registerForm">
+                <div class="mb-4">
+                    <input type="text" class="form-control" id="newUsername" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="mb-4">
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="mb-4">
+                    <input type="password" class="form-control" id="newPassword" placeholder="Contraseña" required>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const newUsername = document.getElementById('newUsername').value;
+            const newPassword = document.getElementById('newPassword').value;
+            localStorage.setItem('username', newUsername);
+            localStorage.setItem('password', newPassword); // Guardar la contraseña
+            alert('Registro exitoso. Redirigiendo al inicio de sesión...');
+            window.location.href = 'login.html';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-9lBwQkHoCDCCIVG+TkmDM5dAdHA7rp2y1Q3sYu5pQnfpEE3QH0dLIZq5gUVzgW/4" crossorigin="anonymous"></script>
+</body>
+</html>

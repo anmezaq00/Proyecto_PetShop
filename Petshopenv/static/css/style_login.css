@@ -1,0 +1,67 @@
+body {
+    background-image: url('/media/img/fondo-colores-degradado-futurista_78895-2845.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    position: relative;
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.9); 
+}
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #007bff;
+}
+.form-control {
+    border: none;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    box-shadow: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+}
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: none;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.forgot-password, .create-account {
+    text-align: center;
+    margin-top: 20px;
+}
+.login-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px; 
+    height: 150px; 
+    background-image: url('/media/img/carta-login.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; 
+}

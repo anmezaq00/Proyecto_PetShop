@@ -1,0 +1,144 @@
+/* CSS INDEX */
+
+/* MODIFICACION NAVBAR */
+.navbar_inicio {
+    border-radius: 10px;
+    padding: 10px;
+}
+.navbar_texto {
+    font-size: 18px;
+}
+/* MODIFICACION CARRUSEL */
+.carrusel {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+/* ESTILO DE TARJETAS CONTAINER Y TITULO DEL CONTAINER */
+.card-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.precio {
+    color: red;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* ESTILO DE CONTAINER CON BOTONES CIRCULARES, SOMBREADO, ESPACIADOS Y TAMAÑOS */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 30px;
+}
+.button {
+    width: 200px;
+    height: 120px;
+    border-radius: 70%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+.button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.separador1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+.separador {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.additional-content {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+.direccion {
+    width: 100%;
+}
+.cont_footer {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+/* Nuevo estilo para centrar el botón en la carta */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card .btn {
+    align-self: center;
+}
+.account-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
